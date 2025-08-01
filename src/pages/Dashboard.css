@@ -1,0 +1,221 @@
+.dashboard-container {
+    padding: 24px;
+    background-color: #f3f4f6;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.dashboard-section {
+    margin-bottom: 32px;
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.card {
+    flex: 1;
+    min-width: 280px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.section-title {
+    font-size: 16px;
+    color: #6b7280;
+    margin-bottom: 8px;
+}
+
+.count {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #4b5563;
+}
+
+.circle-chart {
+    width: 80px;
+    height: 80px;
+    border: 8px solid #60a5fa;
+    border-bottom-color: #facc15;
+    border-radius: 50%;
+    margin: 20px auto 0;
+}
+
+.calendar-list {
+    margin-top: 16px;
+    list-style: none;
+    padding: 0;
+}
+
+.event {
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.event.green {
+    background-color: #dcfce7;
+}
+
+.event.yellow {
+    background-color: #fef9c3;
+}
+
+.event.red {
+    background-color: #fee2e2;
+}
+
+.onboarding-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.onboarding-table th,
+.onboarding-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+.avatars {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.avatars img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.status.pending {
+    color: #f59e0b;
+    font-weight: bold;
+}
+.leave-list {
+    margin-top: 16px;
+    padding-left: 16px;
+    list-style-type: disc;
+    font-size: 14px;
+    color: #374151;
+}
+
+.leave-list li {
+    margin-bottom: 10px;
+}
+/* Optional: Add styles if these classes don’t exist yet */
+.status.completed {
+    color: #16a34a;
+    font-weight: bold;
+}
+
+.status.delayed {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.avatars {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.avatars img {
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #ccc;
+}
+.payroll-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.payroll-item {
+    flex: 1;
+    min-width: 180px;
+    background-color: #f3f4f6;
+    padding: 12px 16px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.payroll-item h4 {
+    color: #374151;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.amount {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.amount.text-yellow {
+    color: #eab308;
+}
+
+.status.completed {
+    color: #16a34a;
+    font-weight: bold;
+}
+
+.status.pending {
+    color: #f59e0b;
+    font-weight: bold;
+}
+
+.double-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.sub-card {
+    padding-bottom: 8px;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 10px 0;
+}
+.card-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* space between Announcements and Leave cards */
+    flex: 1;
+    min-width: 280px;
+}
+
+.dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f9f9fb;
+}
+
+.dashboard-main {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}

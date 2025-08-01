@@ -1,0 +1,200 @@
+.employee-profile-main {
+    flex: 1;
+    padding: 30px;
+    background: linear-gradient(135deg, #f0f4ff, #e0e7ff);
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+.profile-card-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.profile-card {
+    background: linear-gradient(145deg, #ffffff, #f3f4f6);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #d1d5db;
+}
+
+.profile-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
+.profile-card h3 {
+    font-size: 30px;
+    color: #4f46e5;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid #c7d2fe;
+    padding-bottom: 12px;
+}
+
+.profile-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    padding: 0;
+    list-style: none;
+    color: #111827;
+}
+
+.profile-list li {
+    background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+    padding: 18px 22px;
+    border-radius: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    border-left: 5px solid #6366f1;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.profile-list li:hover {
+    background: linear-gradient(135deg, #dbeafe, #c7d2fe);
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.profile-list li svg {
+    color: #4f46e5;
+    font-size: 18px;
+    margin-top: 3px;
+}
+
+.profile-list li span {
+    display: block;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .profile-card {
+        padding: 24px;
+    }
+
+    .profile-card h3 {
+        font-size: 24px;
+    }
+
+    .profile-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/*.profile-list {*/
+/*    list-style: none;*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*    font-size: 15px;*/
+/*}*/
+
+/*.profile-list li {*/
+/*    margin-bottom: 8px;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    gap: 8px;*/
+/*}*/
+
+/*.profile-card {*/
+/*    background-color: #fff;*/
+/*    padding: 20px;*/
+/*    border-radius: 12px;*/
+/*    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);*/
+/*    max-width: 900px;*/
+/*    margin: 0 auto;*/
+/*}*/
+/*.employee-profile-main {*/
+/*    flex: 1;*/
+/*    padding: 30px 40px;*/
+/*    background: #f9fbff;*/
+/*    overflow-y: auto;*/
+/*}*/
+
+/*.profile-card-container {*/
+/*    max-width: 1100px;*/
+/*    margin: 0 auto;*/
+/*}*/
+
+/*.profile-card {*/
+/*    background: #fff;*/
+/*    border-radius: 18px;*/
+/*    padding: 30px 40px;*/
+/*    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);*/
+/*    transition: all 0.3s ease;*/
+/*}*/
+
+/*.profile-card:hover {*/
+/*    transform: translateY(-4px);*/
+/*}*/
+
+/*.profile-card h3 {*/
+/*    font-size: 28px;*/
+/*    color: #1f2937;*/
+/*    margin-bottom: 30px;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    gap: 12px;*/
+/*    border-bottom: 2px solid #e0e7ff;*/
+/*    padding-bottom: 12px;*/
+/*}*/
+
+/*.profile-list {*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));*/
+/*    gap: 20px;*/
+/*    padding: 0;*/
+/*    list-style: none;*/
+/*    color: #374151;*/
+/*}*/
+
+/*.profile-list li {*/
+/*    background: #f1f5f9;*/
+/*    padding: 16px 20px;*/
+/*    border-radius: 14px;*/
+/*    display: flex;*/
+/*    align-items: flex-start;*/
+/*    gap: 12px;*/
+/*    border-left: 4px solid #6366f1;*/
+/*    transition: 0.3s ease;*/
+/*}*/
+
+/*.profile-list li:hover {*/
+/*    background-color: #e0e7ff;*/
+/*}*/
+
+/*.profile-list li .icon {*/
+/*    margin-top: 3px;*/
+/*}*/
+
+/*.profile-list li span {*/
+/*    display: block;*/
+/*    line-height: 1.5;*/
+/*}*/
+
+/*@media (max-width: 768px) {*/
+/*    .profile-card {*/
+/*        padding: 20px;*/
+/*    }*/
+
+/*    .profile-card h3 {*/
+/*        font-size: 22px;*/
+/*    }*/
+
+/*    .profile-list {*/
+/*        grid-template-columns: 1fr;*/
+/*    }*/
+
+/*    .profile-list li {*/
+/*        font-size: 15px;*/
+/*    }*/
+/*}*/

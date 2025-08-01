@@ -1,0 +1,134 @@
+/* Rows per page select styling */
+.rows-per-page-select {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 18px;
+  gap: 8px;
+  font-size: 1rem;
+}
+.rows-per-page-select label {
+  color: #374151;
+  font-weight: 500;
+}
+.rows-per-page-select select {
+  padding: 6px 16px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  background: #f3f4f6;
+  color: #222;
+  font-weight: 500;
+  outline: none;
+  transition: border 0.2s;
+}
+.rows-per-page-select select:focus {
+  border: 1.5px solid #6366f1;
+}
+/* Layout for sidebar + content */
+.employee-page-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f3f4f6;
+}
+
+.employee-list-container {
+  flex: 1;
+  padding: 40px 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+  margin-top: 40px;
+}
+
+/* Pagination controls styling */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 32px 0 0 0;
+}
+.pagination-controls button {
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+.pagination-controls button.active,
+.pagination-controls button:focus {
+  background: #2563eb;
+  outline: none;
+  transform: scale(1.08);
+}
+.pagination-controls button:disabled {
+  background: #d1d5db;
+  color: #888;
+  cursor: not-allowed;
+}
+.employee-list-container {
+    padding: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9fbfc;
+    min-height: 100vh;
+}
+
+.employee-list-container h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.employee-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.employee-table thead {
+    background-color: #34495e;
+    color: #ecf0f1;
+}
+
+.employee-table th,
+.employee-table td {
+    padding: 16px 20px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.employee-table th {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.employee-table tbody tr {
+    transition: background 0.25s;
+}
+
+.employee-table tbody tr:nth-child(even) {
+    background-color: #f2f6fa;
+}
+
+.employee-table tbody tr:hover {
+    background-color: #e3f2fd;
+    cursor: pointer;
+}
+
+.employee-table td {
+    color: #2d3436;
+    vertical-align: middle;
+}

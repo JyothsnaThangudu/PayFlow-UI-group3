@@ -1,0 +1,154 @@
+/* Overall layout */
+.admin-dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Main content area */
+.admin-dashboard-main {
+  flex: 1;
+  padding: 40px;
+  background: linear-gradient(135deg, #f9fafb 0%, #eef2ff 100%);
+}
+
+/* Summary cards row */
+.summary-cards-row {
+  display: flex;
+  gap: 12px;
+  margin: 36px 0 32px 0;
+  flex-wrap: nowrap;
+}
+
+.summary-cards-row .admin-card {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 20px 16px;
+}
+
+/* Individual stat card with gradient */
+.admin-card {
+  flex: 1;
+  min-width: 200px;
+  max-width: 200px;
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5ff 100%);
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(99, 102, 241, 0.12);
+}
+
+.admin-section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #4338ca;
+  margin-bottom: 10px;
+}
+
+.admin-count {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1e293b;
+  margin-top: 10px;
+}
+
+.admin-stats {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #475569;
+}
+
+/* HR table container with gradient */
+.hr-table-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(30, 41, 59, 0.05);
+}
+
+/* HR section header with button */
+.hr-management-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+/* Add New HR button with gradient */
+.create-btn {
+  padding: 10px 18px;
+  background: linear-gradient(90deg, #4f46e5 0%, #6366f1 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.create-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(79, 70, 229, 0.3);
+}
+
+/* Status pill with gradients */
+.status.active {
+  background: linear-gradient(90deg, #d1fae5, #6ee7b7);
+  color: #065f46;
+}
+
+.status.inactive {
+  background: linear-gradient(90deg, #fee2e2, #fecaca);
+  color: #991b1b;
+}
+
+/* Disable Button with gradient */
+.disable-btn {
+  background: linear-gradient(90deg, #e74c3c, #f87171);
+  color: white;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.disable-btn:hover {
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+}
+
+.disabled-text {
+  color: gray;
+  font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .admin-card {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+
+  .hr-management-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .create-btn {
+    width: 100%;
+  }
+}

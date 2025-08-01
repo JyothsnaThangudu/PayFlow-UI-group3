@@ -1,0 +1,87 @@
+
+.admin-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6366f1 0%, #818cf8 50%, #f3f4f6 100%);
+}
+
+.admin-login-form {
+  background: #fff;
+  padding: 56px 38px 38px 38px;
+  border-radius: 22px;
+  width: 100%;
+  max-width: 410px;
+  box-shadow: 0 12px 40px rgba(99,102,241,0.13), 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1.5px solid #e0e7ff;
+}
+
+.admin-login-form .admin-logo {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #6366f1 60%, #818cf8 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px auto;
+  box-shadow: 0 2px 8px rgba(99,102,241,0.10);
+}
+.admin-login-form .admin-logo span {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+.admin-login-form h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #22223b;
+  font-size: 2.05rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.admin-login-form input {
+  width: 100%;
+  padding: 15px 13px;
+  margin-bottom: 20px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 1.09rem;
+  background: #f8fafc;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1.5px 4px rgba(99,102,241,0.04);
+}
+.admin-login-form input:focus {
+  border: 1.5px solid #6366f1;
+  outline: none;
+  background: #fff;
+  box-shadow: 0 0 0 2px #a5b4fc44;
+}
+
+.admin-login-form button {
+  width: 100%;
+  padding: 15px 0;
+  background: linear-gradient(90deg, #6366f1 60%, #818cf8 100%);
+  border: none;
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 800;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 2px 8px rgba(99,102,241,0.10);
+  transition: background 0.2s, transform 0.15s;
+  letter-spacing: 0.5px;
+}
+
+.admin-login-form button:hover {
+  background: linear-gradient(90deg, #4f46e5 60%, #6366f1 100%);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(99,102,241,0.13);
+}

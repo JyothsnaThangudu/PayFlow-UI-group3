@@ -1,0 +1,39 @@
+.notifications-page-container {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  padding: 32px 24px;
+}
+
+.notifications-page-container h2 {
+  font-size: 2rem;
+  color: #2d3a4b;
+  margin-bottom: 24px;
+}
+
+.notifications-list {
+  list-style: none;
+  padding: 0;
+}
+
+.notification-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7fafc;
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin-bottom: 14px;
+  font-size: 1.08rem;
+}
+
+.notification-message {
+  color: #2d3a4b;
+}
+
+.notification-date {
+  color: #718096;
+  font-size: 0.98rem;
+}

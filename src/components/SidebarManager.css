@@ -1,0 +1,64 @@
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    background-color: #4f46e5; /* Indigo-600 */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.nav-list li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.active-link {
+    background: linear-gradient(90deg, #6366f1 60%, #818cf8 100%);
+    color: #fff !important;
+    box-shadow: 0 6px 24px #6366f1cc, 0 0 12px #818cf8cc;
+    border-radius: 14px;
+    font-weight: 900;
+    letter-spacing: 0.03em;
+    padding: 12px 24px;
+    border: 3px solid #6366f1;
+    text-shadow: 0 2px 16px #6366f1cc, 0 0 8px #818cf8cc;
+    outline: 2.5px solid #818cf8;
+    outline-offset: 0px;
+    transform: scale(1.11);
+    z-index: 2;
+    transition: all 0.18s cubic-bezier(.4,2,.6,1);
+}
