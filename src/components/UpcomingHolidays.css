@@ -1,0 +1,36 @@
+.page-container {
+  display: flex;
+}
+
+.content-area {
+  flex-grow: 1;
+  /* margin-left: 250px;  */
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.holidays-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+.holidays-table th,
+.holidays-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.holidays-table th {
+  background: linear-gradient(45deg, #4b55df, #2575fc);
+  color: white;
+  font-weight: bold;
+}
+
+.holidays-table tbody tr:hover {
+  background-color: #f0f4ff;
+}
+

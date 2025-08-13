@@ -1,0 +1,42 @@
+.home-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4f46e5, #a78bfa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: -10px 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.home-content {
+    background-color: #ffffff;
+    padding: 50px 40px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    max-width: 700px;
+    text-align: center;
+}
+
+.home-content h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #4f46e5;
+}
+
+.home-content h1 span {
+    color: #4338ca;
+}
+
+.home-content p {
+    font-size: 17px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.home-content .tagline {
+    font-weight: bold;
+    font-size: 16px;
+    color: #1e1e1e;
+    margin-top: 20px;
+}

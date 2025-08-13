@@ -1,0 +1,462 @@
+/* Manager Payment Holds Styles */
+.manager-payment-holds-layout {
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e8f5e8 0%, #f0fdf4 100%);
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+.manager-payment-holds-main {
+    flex: 1;
+    padding: 32px;
+    overflow-y: auto;
+}
+
+.manager-payment-holds-header {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.manager-payment-holds-header h1 {
+    color: #1a202c;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.manager-payment-holds-header p {
+    color: #4a5568;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Message Styles */
+.message {
+    padding: 16px 20px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.message.success {
+    background: linear-gradient(135deg, #d4edda, #c3e6cb);
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.message.success::before {
+    content: "✅";
+    font-size: 1.2rem;
+}
+
+.message.error::before {
+    content: "❌";
+    font-size: 1.2rem;
+}
+
+/* Content Layout */
+.manager-payment-holds-content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Card Styles */
+.place-hold-card,
+.current-holds-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
+
+.card-header {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    color: white;
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Search Box */
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    padding: 0 16px;
+    min-width: 250px;
+}
+
+.search-box svg {
+    color: rgba(255, 255, 255, 0.8);
+    margin-right: 8px;
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 10px 0;
+    font-size: 0.95rem;
+    outline: none;
+    flex: 1;
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Form Styles */
+.place-hold-form {
+    padding: 32px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group select {
+    padding: 14px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    background: white;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: #059669;
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Button Styles */
+.place-hold-btn {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-width: 200px;
+}
+
+.place-hold-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(5, 150, 105, 0.3);
+}
+
+.place-hold-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Table Styles */
+.holds-table-container {
+    padding: 32px;
+    overflow-x: auto;
+}
+
+.holds-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.holds-table thead {
+    background: linear-gradient(135deg, #065f46, #047857);
+    color: white;
+}
+
+.holds-table th {
+    padding: 18px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+}
+
+.holds-table td {
+    padding: 16px;
+    border-bottom: 1px solid #e2e8f0;
+    vertical-align: middle;
+}
+
+.holds-table tbody tr {
+    transition: all 0.2s ease;
+}
+
+.holds-table tbody tr:hover {
+    background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+    transform: translateX(4px);
+}
+
+.holds-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Employee Info */
+.employee-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.employee-info strong {
+    color: #2d3748;
+    font-weight: 600;
+}
+
+.employee-info small {
+    color: #718096;
+    font-size: 0.85rem;
+}
+
+/* Hold Period */
+.hold-period {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+    color: #065f46;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    justify-content: center;
+}
+
+/* Hold Reason Badge */
+.hold-reason-badge {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    color: #92400e;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    display: inline-block;
+}
+
+/* Salary Amount */
+.salary-amount {
+    font-weight: 700;
+    color: #047857;
+    font-size: 1.1rem;
+}
+
+/* Status */
+.status-active {
+    background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+    color: #065f46;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Release Button */
+.release-btn {
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.release-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #b91c1c, #991b1b);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(220, 38, 38, 0.3);
+}
+
+.release-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Loading and Empty States */
+.loading-state,
+.empty-state {
+    text-align: center;
+    padding: 64px 32px;
+    color: #718096;
+}
+
+.spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid #e2e8f0;
+    border-top: 3px solid #059669;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 16px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.empty-icon {
+    font-size: 4rem;
+    color: #cbd5e0;
+    margin-bottom: 16px;
+}
+
+.empty-state h3 {
+    color: #4a5568;
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+}
+
+.empty-state p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .manager-payment-holds-main {
+        padding: 24px;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+    
+    .card-header {
+        padding: 20px 24px;
+    }
+    
+    .holds-table-container {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .manager-payment-holds-header h1 {
+        font-size: 2rem;
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .card-header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+    
+    .search-box {
+        min-width: auto;
+    }
+    
+    .holds-table-container {
+        padding: 16px;
+    }
+    
+    .holds-table {
+        min-width: 800px;
+    }
+}
+
+@media (max-width: 480px) {
+    .manager-payment-holds-main {
+        padding: 16px;
+    }
+    
+    .manager-payment-holds-content {
+        gap: 24px;
+    }
+    
+    .place-hold-form,
+    .holds-table-container {
+        padding: 20px;
+    }
+}
